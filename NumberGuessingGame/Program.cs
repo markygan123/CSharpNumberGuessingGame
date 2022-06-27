@@ -13,18 +13,27 @@ while (playAgain)
     Console.WriteLine("\n**********GUESS THE NUMBER GAME**********\n");
     while (true)
     {
-        Console.Write("\nEnter the limit number (1-20): ");
-        limit = Convert.ToInt32(Console.ReadLine());
-        randomNumber = random.Next(1, limit);
+        try
+        {
+            Console.Write("\nEnter the limit number (1-20): ");
+            limit = Convert.ToInt32(Console.ReadLine());
+            randomNumber = random.Next(1, limit);
 
-        if (limit > 20)
-        {
-            Console.WriteLine("Please choose a limit number within 1-20.");
+            if (limit > 20)
+            {
+                Console.WriteLine("Please choose a limit number within 1-20.");
+            }
+            else
+            {
+                break;
+            }
         }
-        else
+        catch (FormatException)
         {
-            break;
+            Console.WriteLine("Please enter a number only.");
         }
+        
+
     }
 
     while (true)
