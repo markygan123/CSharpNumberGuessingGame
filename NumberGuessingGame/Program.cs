@@ -32,13 +32,11 @@ while (playAgain)
         {
             Console.WriteLine("Please enter a number only.");
         }
-        
-
     }
 
     while (true)
     {
-        Console.Write("\nChoose difficulty: [1] Easy - 20 | [2] Medium - 10 | [3] Hard - 5: ");
+        Console.Write("\nChoose difficulty: [1) Easy - 20 | [2] Medium - 10 | [3] Hard - 5: ");
         difficulty = Convert.ToInt32(Console.ReadLine());
         if (difficulty == 1)
         {
@@ -78,7 +76,6 @@ while (playAgain)
             if (guess < randomNumber)
             {
                 Console.WriteLine($"\n{guess} is too low!");
-
             }
 
             attempts--;
