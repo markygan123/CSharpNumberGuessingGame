@@ -68,15 +68,22 @@ while (playAgain)
         guess = Convert.ToInt32(Console.ReadLine());
         if (guess != randomNumber)
         {
-            if (guess > randomNumber)
+            if (guess > 20)
+            {
+                Console.WriteLine("\nYour guess is past the limit!");
+            }
+
+            if (guess <= 20 && guess > randomNumber)
             {
                 Console.WriteLine($"\n{guess} is too high!");
             }
 
-            if (guess < randomNumber)
+            if (guess <= 20 && guess < randomNumber)
             {
                 Console.WriteLine($"\n{guess} is too low!");
             }
+
+            
 
             attempts--;
             Console.WriteLine($"{attempts} guesses left");
