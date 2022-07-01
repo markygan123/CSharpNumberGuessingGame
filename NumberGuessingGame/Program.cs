@@ -1,15 +1,15 @@
-﻿Random random = new Random(); // initialize random
-int randomNumber;
-int attempts;
-int limit;
-int difficulty;
-int guess;
-bool playAgain = true;
-string response;
-
-while (playAgain)
+﻿while (true)
 {
-    
+    Random random = new Random(); // initialize random
+    int randomNumber;
+    int attempts;
+    int limit;
+    int difficulty;
+    int guess;
+    bool playAgain = true;
+    string response;
+
+
     Console.WriteLine("\n**********GUESS THE NUMBER GAME**********\n");
     while (true)
     {
@@ -113,7 +113,7 @@ while (playAgain)
     }
     else
     {
-        playAgain = false;
+        break;
     }
 }
 
